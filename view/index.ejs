@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddit Comment Viewer</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    // Refresh every 5 seconds
+    setInterval(() => {
+      location.reload();
+    }, 5000);
+  </script>
+</head>
+<body>
+  <h1>Reddit Comments - Sora 2 Invite Code Megathread</h1>
+  <div id="comments">
+    <% comments.forEach(comment => { %>
+      <div class="comment">
+        <p><strong><%= comment.author %></strong> (<%= comment.created %>)</p>
+        <p><%= comment.body %></p>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
